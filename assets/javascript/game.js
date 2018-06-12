@@ -34,18 +34,17 @@ guess = event.key;
     //if randomLetter != guess then guessCounter + 1
         // if guessCounter = 9 then losses + 1
         // if guessCounter < 9 then return to event function for next user guess
-    else {
-        if(guessCounter = 9) {
+    else if(guessCounter == 8) {
             losses++;
         resetGame()
-        return;
+    }
         
-
+    else {
         guessCounter++;
         var guessHTML = document.getElementById("guess");
         console.log(guessHTML);
         guessHTML.innerHTML += guess + ", ";
-        }
+       
     }
    
 };
