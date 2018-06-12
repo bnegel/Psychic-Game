@@ -11,7 +11,7 @@
 var guess = "";
 var alphabet = "abcdefghijklmnopqrstuvwxyz"
 var randomLetter = alphabet[Math.floor(Math.random() * alphabet.length)];
-var guessCounter = 0;
+var guessCounter = 9;
 var wins = 0;
 var losses = 0;
 
@@ -34,28 +34,34 @@ guess = event.key;
     //if randomLetter != guess then guessCounter + 1
         // if guessCounter = 9 then losses + 1
         // if guessCounter < 9 then return to event function for next user guess
-    else if(guessCounter == 8) {
+    else if(guessCounter == 0) {
             losses++;
         resetGame()
     }
         
     else {
-        guessCounter++;
+        guessCounter--;
+        var guessCounterHTML = document.getElementById("guessCounter");
         var guessHTML = document.getElementById("guess");
         console.log(guessHTML);
         guessHTML.innerHTML += guess + ", ";
+        guessCounterHTML.innerHTML = "Guesses left: " + guessCounter;
+        console.log(guessCounterHTML);
        
     }
    
 };
 
+//What had been happening is that when the wins and losses (or guesses as in line 48) started posting, the HTML text went away, showing only the digits. 
+//I know replacing it in this way is probably really inelegant, but it works. 
 function resetGame () {
-    guessCounter = 0;
+    guessCounter = 9;
     var winsHTML = document.getElementById("wins");
     var lossesHTML = document.getElementById("losses");
-    winsHTML.innerHTML = wins;
-    lossesHTML.innerHTML = losses;
-
+    winsHTML.innerHTML = "Wins: " + wins;
+    lossesHTML.innerHTML = "Losses: " + losses;
+    var guessHTML = document.getElementById("guess");
+    guessHTML.innerHTML = "Your guesses so far: ";
 }
 
 
