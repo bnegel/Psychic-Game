@@ -1,0 +1,54 @@
+* { box-sizing: border-box; }
+
+#backGround {
+/* display: inline-block; */
+background-color: black;
+padding-top: 5%;
+padding-bottom: 60%;
+margin: 0;
+}
+
+
+.jumbotron {
+    background-color: black;
+    margin: 0%;
+
+}
+
+img {
+    height: 30%;
+    width: 30%;
+    position: fixed;
+    margin-left: 30%;
+    
+}
+
+.display-4 {
+    font-family: 'Eater' cursive;
+    color: blueviolet;
+    font-weight: bolder;
+
+
+}
+
+.lead {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: teal;
+
+}
+
+#prompt {
+    color: white;
+    margin-left: 25%;
+}
+
+#gameSpace {
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 20px;
+    background-color: midnightblue;
+    background-blend-mode: color-burn;
+    color: pink;
+}
+

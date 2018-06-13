@@ -4,8 +4,10 @@
   <meta charset="UTF-8">
   <title>Psychic Game</title>
 
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Eater" rel="stylesheet">
   <script type="text/javascript" src="assets/javascript/game.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -13,21 +15,26 @@
 
 </head>
 
-<div class="jumbotron">
-    <h1 class="display-4">Psychic Game</h1>
-    <p class="lead">Hit a key to see whether you have second sight!</p>
-    <hr class="my-4">
-    <p>Guess what letter I'm thinking of . . .</p>
-  </div>
-
-<!--set up IDs to be used later in JS-->
 
 
-  <p id = "wins">Wins: </p>
-  <p id = "losses">Losses: </p>
-  <p id = "guessCounter">Guesses left: </p>
-  <p id = "guess">Your guesses so far: </p>
+  <div class="jumbotron">
+      <img src="https://c1.staticflickr.com/5/4134/4936925900_638688bc51_b.jpg" alt="psychic sign">
+      <h1 class="display-4">Psychic Game</h1>
+      <p class="lead">Hit a key to see whether you have second sight!</p>
+      <hr class="my-4">
+      
+    </div>
 
+  <div id = "backGround">
+      <p id="prompt">Guess what letter I'm thinking of . . .</p>
 
+    <div id = "gameSpace">
+      <p id = "wins">Wins: </p>
+      <p id = "losses">Losses: </p>
+      <p id = "guessCounter">Guesses left: </p>
+      <p id = "guess">Your guesses so far: </p>
+    </div>
+
+</div>
  
 <body>
